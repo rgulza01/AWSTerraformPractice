@@ -1,6 +1,6 @@
 This repo contains example Terraform configurations for building AWS infrastructure.
-**Make sure you have valid AWS credentials configured on your machine. This typically involves setting environment variables such as AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY with your AWS access key and secret key, respectively. You can also use other methods like AWS CLI profiles or instance profiles depending on your setup.
-**
+
+## Make sure you have valid AWS credentials configured on your machine. This typically involves setting environment variables such as AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY with your AWS access key and secret key, respectively. You can also use other methods like AWS CLI profiles or instance profiles depending on your setup.
 
 
 ## AWS Exercises

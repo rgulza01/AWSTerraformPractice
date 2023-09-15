@@ -1,9 +1,8 @@
 terraform {
-  required_version = ">= 1.4.0"
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = ">= 5.0.0"
+      source = "hashicorp/aws"
+      version = "5.17.0"
     }
   }
 }
@@ -13,10 +12,11 @@ provider "aws" {
 }
 
 resource "aws_vpc" "main" {
-  cidr_block = "10.0.0.0/16"
+  #used to define the IP address range for subnets in a VPC  
+  cidr_block = "10.0.0.0/16" #CIDR (Classless Inter-Domain Routing) notation is used to represent IP address ranges.
 
   tags = {
-    Name = "CloudAcademy"
+    Name = "Learning"
     Demo = "Terraform"
   }
 }

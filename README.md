@@ -1,5 +1,3 @@
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/cloudacademy/terraform-aws)
-
 This repo contains example Terraform configurations for building AWS infrastructure.
 
 ## AWS Exercises
@@ -8,7 +6,6 @@ The exercises directory contains 4 different AWS infrastructure provisioning exe
 ### Exercise 1
 Create a simple AWS VPC spanning 2 AZs. Public subnets will be created, together with an internet gateway, and single route table. A t3.micro instance will be deployed and installed with Nginx for web serving. Security groups will be created and deployed to secure all network traffic between the various components.
 
-https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise1
 
 ![AWS Architecture](./doc/AWS-VPC-Nginx.png)
 
@@ -39,7 +36,6 @@ https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise1
 ### Exercise 2
 Create an advanced AWS VPC spanning 2 AZs with both public and private subnets. An internet gateway and NAT gateway will be deployed into it. Public and private route tables will be established. An application load balancer (ALB) will be installed which will load balance traffic across an auto scaling group (ASG) of Nginx web servers. Security groups will be created and deployed to secure all network traffic between the various components.
 
-https://github.com/cloudacademy/terraform-aws/tree/main/exercises/exercise2
 
 ![AWS Architecture](./doc/AWS-VPC-ASG-Nginx.png)
 

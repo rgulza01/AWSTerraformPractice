@@ -21,6 +21,18 @@ Create a simple AWS VPC spanning 2 AZs. Public subnets will be created, together
 └── variables.tf
 ```
 
+The actions described in the passage below in the "TF Variable Notes" - involve configuring Terraform variables (`workstation_ip` and `key_name`) and setting them as environment variables, are typically performed by users who are somewhat familiar with Terraform and infrastructure provisioning. Beginners in Terraform may not be immediately familiar with these concepts and practices.
+
+Here's a breakdown:
+
+1. **Configuring Terraform Variables:** This involves defining variables within your Terraform configuration to customize various aspects of your infrastructure. While it's a fundamental concept in Terraform, beginners might need some time to grasp how variables work and when to use them effectively.
+
+2. **Setting Environment Variables:** Setting environment variables (e.g., `TF_VAR_workstation_ip` and `TF_VAR_key_name`) is a common way to provide values to Terraform variables. Beginners might not be familiar with this practice right away, but it's a useful technique to learn as it allows you to manage sensitive or environment-specific information separately from your Terraform configuration files.
+
+3. **SSH Key Pairs:** Managing SSH key pairs (as represented by the `key_name` variable) is typically an intermediate-level task. Beginners might need some initial guidance on creating and managing SSH keys in cloud provider consoles.
+
+Overall, while beginners may not dive into these advanced practices immediately, they are essential skills to develop as you gain more experience with Terraform and infrastructure as code. Beginners often start with simpler Terraform configurations and gradually progress to more complex setups as they become more comfortable with the tool.
+
 #### TF Variable Notes
 
 - `workstation_ip`: The Terraform variable `workstation_ip` represents your workstation's external perimeter public IP address, and needs to be represented using CIDR notation. This IP address is used later on within the Terraform infrastructure provisioning process to lock down SSH access on the instance(s) (provisioned by Terraform) - this is a security safety measure to prevent anyone else from attempting SSH access. The public IP address will be different and unique for each user - the easiest way to get this address is to type "what is my ip address" in a google search. As an example response, lets say Google responded with `202.10.23.16` - then the value assigned to the Terraform `workstation_ip` variable would be `202.10.23.16/32` (note the `/32` is this case indicates that it is a single IP address).
